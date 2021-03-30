@@ -7,7 +7,7 @@
 
 [图片2链接](https://JiangShuaiyu.github.io/wordcloud.html)
 
-[图片3链接](https://JiangShuaiyu.github.io/effectscattrt.html)
+[图片3链接](https://JiangShuaiyu.github.io/effectscatter.html)
 
 [图片4链接](https://JiangShuaiyu.github.io/funnel.html)
 
