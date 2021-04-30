@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			h1 {text-shadow: 2px 2px red;}
+			h1.highlight_text{font-size:50px; color: orange;text-align: center;font-style:italic;}	
+			h1.normal_text{color: black;}
+			h2.title{color:Dodgerblue; font-size: 30px;}
+			p.special{background-image: url(./Econometric.png);background-repeat: no-repeat;background-position: right top;margin-right: 200px;}
+			p.double {border-style: double;}
+			p.caution{}
+		</style>
+		
+		<title>Marginal Treatment Effect</title>
+	</head>
+	
+
+	<body>
+		<h1 class='highlight_text'>Welcome to Econometrics!</h1>
+		
+		<h2 class='title'><b>Introduction</b></h2>
+
+		<p class='special' >
+		The estimation of marginal treatment effects(MTEs) is an approach used in empirical research <br />
+		when the impact of a treatment is thought to vary within a population in correlation with <br />
+		unobserved characteristics. For instance, Carneiro, Heckman, and Vytlacil (2011) use this <br />
+		framework to measure the differential returns to education for individuals whose unobserved <br />
+		characteristics make it more likely for them to pursue higher education.Other applications <br />
+		include Doyle (2007) and Brinch, Mogstad, and Wiswall (2012), who use this framework to estimate <br />
+		the effects of foster care and family size, respectively, on the long-term outcomes of children.<br />
+		This paper estimates marginal returns to college when returns differ among individuals, and persons <br />
+		select into economic activities based in part on their idio syncratic returns. Consistent with <br />
+		Heckman, Schmierer, and Urzua (2010), we find evidence that people select into schooling on the <br />
+		basis of realized returns to schooling. In general, marginal and average returns to college are <br />
+		not the same. 28 Conventional average return parameters and IV estimators are weighted averages <br />
+		of the marginal treatment effect (MTE). We show how to identify and estimate the MTE using a robust <br />
+		semiparametric selection model. Focusing on a policy-relevant question, we construct estimators <br />
+		based on the MTE to answer it, rather than hoping that a particular instrumental variable estimator<br />
+		happens to answer a question of economic.Comparing estimates from our semiparametric IV approach <br />
+		with estimates from a normal selection model of the sort used by Willis and Rosen (1979) and <br />
+		Bjorklund and Moffitt (1987), the semiparametric estimates produce an MTE with the same general<br />
+		shape consistent with diminishing returns to education for additional students, but with larger standard.</i></p>
+
+
+		<h2 class='title'> <b> Estimation Method </b></h2>
+
+		<p class="normal_text">
+		We first estimate the parametric normal version of the MTE from section 2.2 with the margte command.<br />
+		Standard errors are calculated using Stata’s bootstrap command.Because a closed-form solution for the<br />
+		standard error of the MTE does not exist, this is the preferred method of measuring the uncertainty<br />
+		surrounding its estimate. However, for the model’s remaining parameters, bootstrapping may be overridden <br />
+		by specifying the option mlikelihood, which uses the maximum likelihood routine of movestay to estimate <br />
+		the parameters and their standard errors.<br />	
+		The parametric polynomial version of the MTE from section 2.2 is obtained by specifying the desired degree<br />
+		of the propensity score used in estimating the expectation of log wages conditional on the propensity score. <br />
+		A link function other than probit may be specified. The example output below assumes a logit link function <br />
+		(estimation results not shown) and a fourth-order polynomial expansion of the propensity score. These options <br />
+		are not mutually exclusive: specifying an alternative to probit necessitates using a polynomial expansion of<br />
+		the propensity score.
+		For more information, you can <a href='http://www.stata-journal.com'>click here. </a></p>
+		
+		<p style="background-color:Tomato;font-size:20px;"><b>Cautions <br />
+		The table output for this model resembles that for the parametric polynomial model. <br />
+		Regression coefficients and normal-based bootstrap standard errors are presented for <br />
+		the independent variables and their interactions with the propensity score. Advanced <br />
+		options of margte are available that instead allow for percentile as well as bias-corrected <br />
+		and accelerated standard errors.</b></p>
+		
+	
+
+	</body>
+</html>
+
+
